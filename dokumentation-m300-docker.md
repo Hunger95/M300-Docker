@@ -49,6 +49,20 @@ Die Sicherheit ist bei meinem Docker Projekt mit folgenden Punkten gewährleiste
 
 
 
+## Funktionsweise/Tests:
+
+Die Funktionsweise des Container-Setups wurde natürlich auch geprüft nach anlegen der Container.
+
+Die folgenden Tests, habe ich durchgeführt um die Kommunikation zwischen den verschiedenen Containern zu prüfen:
+
+- Kann auf den Webserver per "localhost:80" zugegriffen werden?
+- Ist die Datenbank ansprechbar über Phpmyadmin?
+- Werden die Änderungen in MySQL auch persistent im angelegten Volume gespeichert?
+- Funktioniert die Überwachung der Container wie erwartet?
+- 
+
+
+
 ## Reflexion/Wissenszuwachs:
 
 Da ich im Geschäft wie bereits erwähnt momentan mit Docker-ähnliche Plattformen zu tun habe, war der Container-Einstieg im allgemeinen stark verkürzt. Somit konnte ich mit einem gewissen Vorwissen bezüglich Container an diese Aufgabe gehen, was mir eigentlich nur noch die Docker-Spezifik und die technische Umsetzung lies.

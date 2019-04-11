@@ -15,8 +15,6 @@ services:
       ports:
           - 8080:80
       environment:
-          MYSQL_USER: phpmyadmin
-          MYSQL_PASSWORD: hunter1
           MYSQL_ROOT_PASSWORD: hunter2
   db:
     image: mysql:5.7
