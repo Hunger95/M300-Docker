@@ -14,7 +14,13 @@ Als erstes werde ich mal folgendes Tutorial durchmachen, um mich mit Docker zu b
 
 
 
+Nachdem ich mich nun informiert habe, werde ich definieren, was ich mit Docker in betrieb nehmen will:
 
+
+
+Geplant ist, dass ich wie bei der Vagrant Aufgabe einen LAMP-Stack containerisiere. Dazu gehört ein Docker image welches einen Webserver und noch eine MySQL Datenbank aufsetzt. Weiter werde ich dazu noch ein phpmyadmin entsprechend einrichten, was aus einem anderen Image kommt, um die Kompetenz der Kombination von zwei verschiedenen Containern zu bekommen.
+
+Weiter werde ich ein entsprechendes persistentes Volume erstellen und Sicherheitsmasnahmen und Monitoring umsetzen.
 
 
 
@@ -34,15 +40,15 @@ Neben der grösseren Erfahrung mit Linux durch mein Lehrbetrieb bin ich auch akt
 
 ## Sicherheit:
 
+Die Sicherheit ist bei meinem Docker Projekt mit folgenden Punkten gewährleistet:
 
-
-
-
-## Meine VM:
-
-
+- CPU Leistung begränzen
+- Neustarts begränzen
+- Überwachung und Benachrichtigungen
+- Syslog Einbindung
 
 
 
 ## Reflexion/Wissenszuwachs:
 
+Da ich im Geschäft wie bereits erwähnt momentan mit Docker-ähnliche Plattformen zu tun habe, war der Container-Einstieg im allgemeinen stark verkürzt. Somit konnte ich mit einem gewissen Vorwissen bezüglich Container an diese Aufgabe gehen, was mir eigentlich nur noch die Docker-Spezifik und die technische Umsetzung lies.
