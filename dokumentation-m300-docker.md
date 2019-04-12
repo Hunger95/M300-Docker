@@ -69,13 +69,13 @@ Hier eine Tabelle mit den Ergebnissen:
 
 
 
-| **Test Punkt**                                               | **Erwartetes Ergenis** | **Tatsächliches Ergebnis** |
-| ------------------------------------------------------------ | ---------------------- | -------------------------- |
-| Webserver erreichbar unter localhost                         | Funktioniert!          | Funktioniert!              |
-| MySQL über Phpmyadmin erreichbar                             | Funktioniert!          | Funktioniert!              |
-| Testdatenbank (im GUI erstellt) ist über <br />SQL ersichtlich nach einem Neustart | Funktioniert!          | Funktioniert!              |
-| Monitoring per CAdvisor ist im Webbrowser <br />erreichbar und gibt realistische Werte aus | Funktioniert!          | Funktioniert!              |
-| Im Monitoring wird auch bei Belastung nicht mehr<br /> CPU oder Memory Usage angezeigt als die gesetzten Werte | Funktioniert!          | Funktioniert!              |
+| **Test Punkt**                                               | **Erwartetes Ergenis**                                       | **Tatsächliches Ergebnis** |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------- |
+| Webserver erreichbar unter localhost                         | default Webseite gibt MySQL Verbindungsstatus zurück         | Funktioniert!              |
+| MySQL über Phpmyadmin erreichbar                             | PhpMyAdmin login funktioniert mit MySQL Env-Variabeln        | Funktioniert!              |
+| Testdatenbank (im GUI erstellt) ist über SQL ersichtlich nach einem Neustart | Nach Neustart ist im GUI neu erstellte DB per SQL aufgelistet | Funktioniert!              |
+| Monitoring per CAdvisor ist im Webbrowser erreichbar und gibt realistische Werte aus | CAdvisor kann erreicht werden und kann mit InfluxDB kommunizieren | Funktioniert!              |
+| Im Monitoring wird auch bei Belastung nicht mehr CPU oder Memory Usage angezeigt als die gesetzten Werte | In CAdvisor gibt es keine Container, welche über die Limite CPU oder Memory braucht | Funktioniert!              |
 
 
 
