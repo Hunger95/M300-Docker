@@ -20,7 +20,7 @@ Nachdem ich mich nun informiert habe, werde ich definieren, was ich mit Docker i
 
 Geplant ist, dass ich wie bei der Vagrant Aufgabe einen LAMP-Stack containerisiere. Dazu gehört ein Docker image welches einen Webserver und noch eine MySQL Datenbank aufsetzt. Weiter werde ich dazu noch ein phpmyadmin entsprechend einrichten, was aus einem anderen Image kommt, um die Kompetenz der Kombination von zwei verschiedenen Containern zu bekommen.
 
-Weiter werde ich ein entsprechendes persistentes Volume erstellen und Sicherheitsmasnahmen und Monitoring umsetzen.
+Weiter werde ich ein entsprechendes persistentes Volume für die DB erstellen und Sicherheitsmasnahmen und Monitoring umsetzen.
 
 
 
@@ -82,3 +82,7 @@ Hier eine Tabelle mit den Ergebnissen:
 ## Reflexion/Wissenszuwachs:
 
 Da ich im Geschäft wie bereits erwähnt momentan mit Docker-ähnliche Plattformen zu tun habe, war der Container-Einstieg im allgemeinen stark verkürzt. Somit konnte ich mit einem gewissen Vorwissen bezüglich Container an diese Aufgabe gehen, was mir eigentlich nur noch die Docker-Spezifik und die technische Umsetzung lies.
+
+Diese LB hat mir erstaunlicher weise ziemlich viel Spass gemacht. Wenn ich ehrlich bin, hatte ich einige Tage, an denen ich mit Docker ein bisschen zu kämpfen hatte und desswegen nicht der produktivste im Unterricht war. Als ich dann jedoch nach einigen Erfolgsergebnissen motiviert mich auf die Arbeit konzentrieren konnte, war dann der Rest des Setups nur noch ein reibungsloser ablauf. Mit einer neuen Technologie direkt zurecht zu kommen ist für mich eigentlich ein grösseres Problem, was ich jedoch nicht bei dieser Arbeit merkte.
+
+Ich habe somit viel neues über Containerisierung und noch viel mehr über Docker spezifisch durch gute Anleitungen und Erklärungen aus dem Internet gelernt.
