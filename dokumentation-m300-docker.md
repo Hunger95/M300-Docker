@@ -59,7 +59,23 @@ Die folgenden Tests, habe ich durchgeführt um die Kommunikation zwischen den ve
 - Ist die Datenbank ansprechbar über Phpmyadmin?
 - Werden die Änderungen in MySQL auch persistent im angelegten Volume gespeichert?
 - Funktioniert die Überwachung der Container wie erwartet?
-- 
+- Wurden die CPU und Memory Limits angewandt?
+
+
+
+Die Tests können alle durch das Webgui des Webservers, der Datenbank und des Monitoring geprüft werden.
+
+Hier eine Tabelle mit den Ergebnissen:
+
+
+
+| **Test Punkt**                                               | **Erwartetes Ergenis** | **Tatsächliches Ergebnis** |
+| ------------------------------------------------------------ | ---------------------- | -------------------------- |
+| Webserver erreichbar unter localhost                         | Funktioniert!          | Funktioniert!              |
+| MySQL über Phpmyadmin erreichbar                             | Funktioniert!          | Funktioniert!              |
+| Testdatenbank (im GUI erstellt) ist über <br />SQL ersichtlich nach einem Neustart | Funktioniert!          | Funktioniert!              |
+| Monitoring per CAdvisor ist im Webbrowser <br />erreichbar und gibt realistische Werte aus | Funktioniert!          | Funktioniert!              |
+| Im Monitoring wird auch bei Belastung nicht mehr<br /> CPU oder Memory Usage angezeigt als die gesetzten Werte | Funktioniert!          | Funktioniert!              |
 
 
 

@@ -1,4 +1,4 @@
-version: '2'
+version: '2.2'
 
 services:
 
@@ -8,18 +8,24 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    restart: on-failure
     volumes:
       - ./php/www:/var/www/html
+    cpus: 1
+    mem_limit: 1024m
 
 # graphical mysql access
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      links:
-          - db:db
-      ports:
-          - 8080:80
-      environment:
-          MYSQL_ROOT_PASSWORD: hunter2
+    image: phpmyadmin/phpmyadmin
+    links:
+        - db:db
+    ports:
+        - 8080:80
+    restart: on-failure
+    environment:
+        MYSQL_ROOT_PASSWORD: hunter2
+    cpus: 1
+    mem_limit: 1024m
 
 # mysql database
   db:
@@ -28,9 +34,12 @@ services:
      - "3306:3306"
     volumes:
      - /var/lib/mysql
+    restart: on-failure
     environment:
-     - MYSQL_ROOT_PASSWORD=hunter2
+     - MYSQL_ROOT_PASSWORD=dockerischlustig
      - MYSQL_DATABASE=database
+    cpus: 1
+    mem_limit: 1024m
 
 # monitoring gui
   cadvisor:
@@ -38,7 +47,7 @@ services:
     links:
       - influxdb:influxsrv
     command: -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influxsrv:8086
-    restart: always
+    restart: on-failure
     ports:
       - "8888:8080"
     volumes:
@@ -46,24 +55,28 @@ services:
       - /var/run:/var/run:rw
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
+    cpus: 1
+    mem_limit: 1024m
 
 # monitoring db
   influxdbData:
-   image: busybox
-   volumes:
-     - /var/lib/influxdb
-     - ./data/influxdb:/data
-
+    image: busybox
+    volumes:
+      - /var/lib/influxdb
+      - ./data/influxdb:/data
+ 
   influxdb:
-   image: tutum/influxdb:0.9
-   restart: always
-   environment:
-     - PRE_CREATE_DB=cadvisor
-   ports:
-     - "8083:8083"
-     - "8086:8086"
-   expose:
-     - "8090"
-     - "8099"
-   volumes_from:
-     - "influxdbData"
+    image: tutum/influxdb:0.9
+    restart: on-failure
+    environment:
+      - PRE_CREATE_DB=cadvisor
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    expose:
+      - "8090"
+      - "8099"
+    volumes_from:
+      - "influxdbData"
+    cpus: 1
+    mem_limit: 1024m
