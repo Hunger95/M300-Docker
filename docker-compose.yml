@@ -23,7 +23,7 @@ services:
         - 8080:80
     restart: on-failure
     environment:
-        MYSQL_ROOT_PASSWORD: hunter2
+        MYSQL_ROOT_PASSWORD: dockerischlustig
     cpus: 1
     mem_limit: 1024m
 
